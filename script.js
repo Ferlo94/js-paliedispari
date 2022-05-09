@@ -39,16 +39,31 @@
 
 const parola = prompt("Inserisci un nome");
 
-    
-let parolaInvertita= "";
+function reverse (parola) {
 
-for (let i = parola.length - 1; i >= 0 ; i--) {
-    console.log(i, parola[i]);
-    parolaInvertita += parola[i];   
+    let parolaInvertita= "";
+
+    for (let i = parola.length - 1; i >= 0 ; i--) {
+        parolaInvertita += parola[i];   
+        console.log(i, parola[i]);
+    }
+
+    console.log(parolaInvertita);
+
+    if (parola === parolaInvertita) {
+        return true;
+
+    } else {
+        return false;
+        
+    }
 }
 
-console.log(parolaInvertita);
-
-if (parola === parolaInvertita) {
+if (reverse(parola)) {
     console.log("PALINDROMA");
+} else {
+    console.log("NON PALINDROMA");
 }
+
+
+
